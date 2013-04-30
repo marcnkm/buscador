@@ -26,6 +26,7 @@ class Chara(pygame.sprite.Sprite):
 		
 		
 # aqui he fet un canvi
+# segon canvi
 # ---------------------------------------------------------------------
 
 # Funciones
