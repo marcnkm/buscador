@@ -25,7 +25,7 @@ class Chara(pygame.sprite.Sprite):
 		self.rect = self.rects[0][0]
 		
 		
-
+# aqui he fet un canvi
 # ---------------------------------------------------------------------
 
 # Funciones
