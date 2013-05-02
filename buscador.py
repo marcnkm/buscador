@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#prova4
+
 # Módulos
 import sys, pygame
 from pygame.locals import *
