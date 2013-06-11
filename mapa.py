@@ -6,10 +6,10 @@
 import sys, pygame
 from pygame.locals import *
 from aestrella import *
-
-# Clases
-# ---------------------------------------------------------------------
-
+"""
+Clases
+---------------------------------------------------------------------
+"""
 class Mapa(pygame.sprite.Sprite):
 	def __init__(self, archivo="mapa.txt"):
 		
@@ -22,11 +22,17 @@ class Mapa(pygame.sprite.Sprite):
 		
 	def convertir(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.cesped = load_image("images/cesped.png")
-		self.cesped_rect = self.cesped.get_rect()
+		try:
+			self.cesped = load_image("images/cesped.png")
+			self.cesped_rect = self.cesped.get_rect()
+		except NameError, ValueError:
+			print 
 		
-		self.tronco = load_image("images/tronco.png", 1)
-		self.tronco_rect = self.tronco.get_rect()
+		try:
+			self.tronco = load_image("images/tronco.png", 1)
+			self.tronco_rect = self.tronco.get_rect()
+		except NameError, ValueError:
+			print 
 		
 				
 	def __str__(self):
@@ -116,12 +122,11 @@ class Mapa(pygame.sprite.Sprite):
 				screen.blit(self.cesped, (self.cesped_rect.w*c, self.cesped_rect.h*f))
 		for i in range(len(self.salida)):
 			screen.blit(self.salida[i][0], self.salida[i][1])
-
-# ---------------------------------------------------------------------
-
-# Funciones
-# ---------------------------------------------------------------------
-
+"""
+---------------------------------------------------------------------
+Funciones
+---------------------------------------------------------------------
+"""
 def texto(texto, posx, posy, color=(255, 255, 255)):
 	fuente = pygame.font.Font("images/DroidSans.ttf", 25)
 	salida = pygame.font.Font.render(fuente, texto, 1, color)
@@ -163,11 +168,12 @@ def listarCadena(cadena):
 # Lee un archivo de texto y lo convierte en una lista.
 def leerMapa(archivo):
 	mapa = open(archivo, "r")
-	mapa = mapa.readlines()
-	mapa = quitarUltimo(mapa)
-	for i in range(len(mapa)):
-		mapa[i] = listarCadena(mapa[i])
-	return mapa
+	mapp = mapa.readlines()
+	mapa.close()
+	mapp = quitarUltimo(mapp)
+	for i in range(len(mapp)):
+		mapp[i] = listarCadena(mapp[i])
+	return mapp
 
 # ---------------------------------------------------------------------
 

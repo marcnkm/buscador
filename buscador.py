@@ -8,20 +8,6 @@ from pygame.locals import *
 from mapa import *
 from actor import *
 
-# Constantes
-# WIDTH = 640
-# HEIGHT = 480
-
-# Clases
-# ---------------------------------------------------------------------
-
-
-
-# ---------------------------------------------------------------------
-
-# Funciones
-# ---------------------------------------------------------------------
-
 def main():
 	mapa = Mapa()
 	screen = pygame.display.set_mode((mapa.col*32, mapa.fil*32))

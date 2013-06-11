@@ -1,14 +1,15 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#prova branch dos
+
 # Módulos
 import sys, pygame
 from pygame.locals import *
 
 from mapa import *
-
-# Clases
-# ---------------------------------------------------------------------
-
+"""
+Clases
+---------------------------------------------------------------------
+"""
 class Chara(pygame.sprite.Sprite):
 	def __init__(self, fil, col, filename):
 		pygame.sprite.Sprite.__init__(self)
@@ -24,14 +25,10 @@ class Chara(pygame.sprite.Sprite):
 		self.image = self.images[0][0]
 		self.rect = self.rects[0][0]
 		
-		
-# aqui he fet un canvi
-# segon canvi
-# ---------------------------------------------------------------------
-
-# Funciones
-# ---------------------------------------------------------------------
-
+"""
+Funciones
+---------------------------------------------------------------------
+"""
 def cortar_sprite(ruta, fil, col):
 	image = load_image(ruta, True)
 	rect = image.get_rect()

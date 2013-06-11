@@ -4,6 +4,7 @@ import aestrella, mapa, actor, buscador
 
 from mock import patch
 from mock import Mock
+
 from aestrella import AEstrella
 
 #Assegura que les posicions d'inicial al mapa.txt sigui la indicada
@@ -42,9 +43,10 @@ def test_buscarPos():
 		[1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1], 
 		[1, 0, 1, 1, 0, 1, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1], 
 		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]) == [1,1]
-
-#testesja la funcio de distancia per assegurar el seu correcte funcionament
-#per aquests diferents valors d'exemple
+"""
+testesja la funcio de distancia per assegurar el seu correcte funcionament
+per aquests diferents valors d'exemple
+"""
 def test_distancia():
 	assert aestrella.distancia([12,8],[11,8]) == 1
 	assert aestrella.distancia([11,8],[11,8]) == 0
