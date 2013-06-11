@@ -63,10 +63,10 @@ class Mapa(pygame.sprite.Sprite):
 				A = AEstrella(self.mapa)
 				self.mapa[y][x] = 0
 				if A.camino == -1:
-					tex, tex_rec = texto("Imposible", (self.col*32)/2, (self.fil*32)/2)
+					tex, tex_rec = texto("Imposible, the way is blocked", (self.col*32)/2, (self.fil*32)/2)
 					screen.blit(tex, tex_rec)
 					pygame.display.flip()
-					pygame.time.wait(160)
+					pygame.time.wait(1060)
 				else:
 					self.camino = A.camino
 	

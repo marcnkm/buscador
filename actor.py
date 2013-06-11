@@ -35,8 +35,11 @@ class Chara(pygame.sprite.Sprite):
 def cortar_sprite(ruta, fil, col):
 	image = load_image(ruta, True)
 	rect = image.get_rect()
-	w = rect.w / col
-	h = rect.h / fil
+	
+	if not col == 0 and not fil == 0:
+		w = rect.w / col
+		h = rect.h / fil
+
 	sprite = range(fil)
 	rects = range(fil)
 	

@@ -9,8 +9,8 @@ from mapa import *
 from actor import *
 
 # Constantes
-WIDTH = 640
-HEIGHT = 480
+# WIDTH = 640
+# HEIGHT = 480
 
 # Clases
 # ---------------------------------------------------------------------
@@ -20,18 +20,6 @@ HEIGHT = 480
 # ---------------------------------------------------------------------
 
 # Funciones
-# ---------------------------------------------------------------------
-
-def load_image(filename, transparent=False):
-        try: image = pygame.image.load(filename)
-        except pygame.error, message:
-                raise SystemExit, message
-        image = image.convert()
-        if transparent:
-                color = image.get_at((0,0))
-                image.set_colorkey(color, RLEACCEL)
-        return image
-
 # ---------------------------------------------------------------------
 
 def main():
